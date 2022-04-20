@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { NeedyService } from 'src/app/services/needy.service';
 import Swal from 'sweetalert2';
 
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private needyService: NeedyService ,private snack:MatSnackBar) { }
+  constructor(private needyService: NeedyService ,private snack:MatSnackBar,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -79,14 +80,24 @@ formSubmit()
   this.needyService.addNeedy(this.needy).subscribe(
     (data : any)=>{
       console.log(data);
-     Swal.fire("sucess","user is registered","success");
-     
-    }
+    //  Swal.fire("sucess","user is registered","success",5000);
+   Swal.fire( {title: 'User is Successfully registered',
+  html: "You are ready to use service of our mighty heroes !! redirecting to login ....",
+  timer: 4000,
+  text: 'Redirecting...',
+  icon: 'success',
+  showConfirmButton:true,
+  didClose: ( )=>{this.router.navigate(['/login'])},
+    } );
+  
+    
+  }
     ,(error)=>{
       console.log(error);
       alert('error occured!!!');
     }
-  )
+  );
+  
 
 }
 onFileChanged( event: any)

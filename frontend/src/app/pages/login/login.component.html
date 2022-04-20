@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 <div class="bootstrap-wrapper">
     <div class="container text-center">
         <div class="row" style="margin-top:20px;">
@@ -10,7 +10,7 @@
                     <!-- {{needy | json}} -->
                     <h1 class="text-center">"" GOD" can't be every where thats why he make "HEROES"</h1>
                     <h1 class="text-center">LOG IN PORTAL</h1>
-                     <form > 
+                     <form (ngSubmit)="formSubmit()"> 
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>user name</mat-label>
                             <input required [(ngModel)]="login.usrName" name="usrName"

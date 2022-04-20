@@ -1,0 +1,58 @@
+<app-needynavbar></app-needynavbar>
+
+<div class="bootstrap-wrapper">
+    <div class="container text-center">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3 ml200 mr200 mt20 mb200" *ngIf="base">
+                <mat-card class="waste">
+                    
+                    
+                    <h1>Find A Hero</h1>
+                    <button class="btn" (click)="findHero()" >
+                            
+                        <mat-icon  class="mat-icon1">
+                        rocket_launch
+                        </mat-icon>
+
+                        
+                    </button> 
+                    <br><br>
+                    <mat-hint>click on the rocket to find hero &nbsp;&nbsp;<mat-icon >sentiment_satisfied_alt</mat-icon></mat-hint>
+                    
+                   
+                    
+                    
+                </mat-card>    
+            </div>
+            <div class="col-md-6 offset-md-3 ml200 mr200 mt20 mb200" *ngIf="finding">
+                <mat-card class="waste">
+                    
+                    
+                    <h1>Finding  A Hero wait for a second</h1>
+                
+                            
+                        <mat-icon  class="mat-icon1">
+                        hourglass_bottom
+                        </mat-icon>
+
+                        
+                    
+                    <br><br>
+                    <mat-hint>you will get the Hero once they accept your request&nbsp;&nbsp;<mat-icon >sentiment_satisfied_alt</mat-icon></mat-hint>
+                    
+                   
+                    
+                    
+                </mat-card>    
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>

@@ -22,6 +22,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatIconModule} from '@angular/material/icon';
 import { SignuputilComponent } from './pages/signuputil/signuputil.component';
+import { NeedypageComponent } from './pages/needypage/needypage.component';
+import { HeropageComponent } from './pages/heropage/heropage.component';
+import { AdminpageComponent } from './pages/adminpage/adminpage.component';
+import { NeedynavbarComponent } from './components/needynavbar/needynavbar.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { NeedyeditprofileComponent } from './pages/needyeditprofile/needyeditprofile.component';
+import { CatchupheroComponent } from './pages/catchuphero/catchuphero.component';
+import { HeronavbarComponent } from './components/heronavbar/heronavbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +40,13 @@ import { SignuputilComponent } from './pages/signuputil/signuputil.component';
     SignupheroComponent,
     HomeComponent,
     SignuputilComponent,
+    NeedypageComponent,
+    HeropageComponent,
+    AdminpageComponent,
+    NeedynavbarComponent,
+    NeedyeditprofileComponent,
+    CatchupheroComponent,
+    HeronavbarComponent,
 
 
 
@@ -51,6 +66,7 @@ import { SignuputilComponent } from './pages/signuputil/signuputil.component';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
+    MatMenuModule,
     
 
 

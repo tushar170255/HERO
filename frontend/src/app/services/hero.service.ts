@@ -12,4 +12,13 @@ export class HeroService {
   {
     return this.http.post(`${baseUrl}/hero/`,hero);
   }
+  public loginHero (login : any)
+  {
+    return this.http.post(`${baseUrl}/hero/login`,login);
+  }
+  public findHero (needy: any)
+  {
+    console.log(needy.pincode)
+    return this.http.put(`${baseUrl}/hero/${needy.pincode}`,needy);
+  }
 }

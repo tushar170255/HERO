@@ -11,8 +11,31 @@ export class NeedyService {
     private http:HttpClient
   ) { }
 
+  // private static needyDetails:any;
+
   public addNeedy(  needy : any)
   {
     return this.http.post(`${baseUrl}/needy/`,needy);
   }
+  public loginNeedy (login : any)
+  {
+    return this.http.post(`${baseUrl}/needy/login`,login);
+  }
+  public editNeedy(needy : any)
+  {
+    console.log('editeedy',needy);
+    return this.http.put(`${baseUrl}/needy/edit/${needy.id}`,needy);
+  }
+  
+  // public getNeedyDetails(){
+  //   return this.needyDetails;
+  // }
+
+  // public setNeedyDetails(){
+  //   return this.needyDetails;
+  // }
+
+
+
+
 }

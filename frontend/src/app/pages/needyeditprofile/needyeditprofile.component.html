@@ -1,14 +1,13 @@
-<app-navbar></app-navbar>
+<app-needynavbar></app-needynavbar>
+
 <div class="bootstrap-wrapper">
     <div class="container text-center">
         <div class="row" style="margin-top:20px;">
             <div class="col-md-6 offset-md-3 ml200 mr200 mt20 mb200">
                 <mat-card>
-                    <div class="container text-center">
-                        <img src="../../../assets/heroes.jpeg" alt="" />
-                    </div>
+                   
                     {{needy | json}}
-                    <h1 class="text-center">REGISTER HERE</h1>
+                    
                     <form (ngSubmit)="formSubmit()">
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>user name</mat-label>
